@@ -1,0 +1,57 @@
+name: Generate Demo Video (Stick Figure)
+
+on:
+  workflow_dispatch:   # Click "Run workflow" manually
+
+jobs:
+  generate-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install minimal dependencies for fast procedural video
+        run: |
+          pip install opencv-python-headless numpy
+
+      - name: Generate sample viral stick figure video
+        run: |
+          python -c "
+          from src.procedural_stick import build_procedural_stick_video
+          from pathlib import Path
+
+          scenes = [
+              ('Một cậu bé nghèo khó sống ở vùng quê xa xôi.', 5.0),
+              ('Cậu tìm thấy một viên ngọc sáng lấp lánh trong rừng.', 5.5),
+              ('Cậu trở nên giàu có, mọi người xung quanh thay đổi thái độ.', 5.0),
+              ('Nhưng cậu nhận ra hạnh phúc không nằm ở tiền bạc.', 5.5),
+              ('Cậu quyết định dùng tài sản giúp đỡ người nghèo và tìm thấy ý nghĩa thật sự.', 6.0),
+          ]
+
+          out_dir = Path('output/demo')
+          out_dir.mkdir(parents=True, exist_ok=True)
+          out_path = out_dir / 'demo_viral_stick_figure.mp4'
+
+          print('Đang tạo video demo người que (siêu nhanh)...')
+          video = build_procedural_stick_video(scenes, out_path, fps=24)
+          print(f'✅ Đã tạo xong: {video}')
+          print(f'Kích thước: {video.stat().st_size / 1024:.1f} KB')
+          print('Video này thể hiện phong cách Người que hoạt hình kịch tính của project.')
+          "
+
+      - name: Upload generated video as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-video
+          path: output/demo/demo_viral_stick_figure.mp4
+          retention-days: 7
+
+      - name: Show info
+        run: |
+          echo "Workflow completed!"
+          echo "Download the artifact from the Actions tab to watch the sample video."
