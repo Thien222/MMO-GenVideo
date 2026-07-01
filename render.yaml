@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: mmo-video-studio
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    # FFmpeg is installed via packages.txt logic or we use build
+    # For Render you can add system packages in the dashboard or use a Dockerfile.
+    # Recommended: use the button "Add Environment Variable" for GROQ_API_KEY

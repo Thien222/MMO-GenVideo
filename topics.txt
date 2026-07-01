@@ -1,0 +1,103 @@
+# Moi dong la 1 chu de video. Dong bat dau bang # se bi bo qua.
+# Them/bot/sua tuy y. Chay hang loat: python -m src.pipeline --batch topics.txt
+
+3 English phrases natives use instead of "very good"
+Stop saying "I'm fine" - say these instead
+5 ways to say "thank you" like a native
+How to politely disagree in English
+3 phrasal verbs you hear every day
+Say this instead of "I don't know"
+Business email phrases that sound professional
+3 ways to start a conversation in English
+Common English mistakes beginners make
+How to sound more confident in English
+3 idioms about money explained simply
+Stop saying "good morning" - try these
+English phrases for ordering food
+How to apologize politely in English
+3 ways to say "I'm tired" in English
+Words to use instead of "happy"
+3 phrases for small talk with strangers
+How to ask for help politely in English
+English phrases for a job interview
+3 ways to say "no" without being rude
+Common contractions natives always use
+How to give directions in English
+3 useful phrases for travelers
+Say this when you don't understand
+3 ways to express surprise in English
+How to end a conversation politely
+English phrases for shopping
+3 words that make you sound fluent
+How to make a request at work
+3 ways to say "expensive" in English
+Phrases to use when you're late
+How to compliment someone in English
+3 phrasal verbs with "get"
+Stop saying "delicious" - say these
+How to talk about your hobbies
+3 ways to agree strongly in English
+English phrases for the airport
+How to introduce yourself professionally
+3 idioms about time explained
+Say this instead of "really good"
+3 ways to ask someone's opinion
+How to handle a phone call in English
+3 phrases for giving feedback politely
+Words to use instead of "sad"
+3 ways to say goodbye in English
+How to order coffee like a native
+3 common British vs American words
+How to express your feelings in English
+3 phrasal verbs with "look"
+Stop saying "big" - use these words
+How to talk about the weather
+3 ways to say "I agree" professionally
+English phrases for a restaurant
+How to ask for the price politely
+3 idioms about work explained simply
+Say this when you make a mistake
+3 ways to encourage someone in English
+How to talk about your weekend
+3 useful phrases for emails
+How to politely interrupt someone
+3 ways to say "interesting" in English
+Words to use instead of "nice"
+3 phrasal verbs with "take"
+How to make plans with friends
+3 ways to ask for clarification
+English phrases for checking in at a hotel
+How to give your opinion confidently
+3 idioms about food explained
+Say this instead of "very tired"
+3 ways to thank someone for help
+How to talk about your job
+3 common email closing phrases
+How to respond to "how are you"
+3 ways to say something is easy
+Stop saying "I think" - try these
+How to describe your hometown
+3 phrasal verbs with "put"
+How to ask someone to repeat
+3 ways to say "beautiful" in English
+English phrases for a doctor's visit
+How to politely say no to plans
+3 idioms about success explained
+Say this when you agree partly
+3 ways to start an email
+How to talk about your future plans
+3 words natives use to sound casual
+How to make a polite complaint
+3 ways to say "difficult" in English
+English phrases for using public transport
+How to congratulate someone
+3 phrasal verbs with "come"
+Stop saying "good" - use these instead
+How to ask for a favor politely
+3 ways to express excitement
+How to describe your daily routine
+3 common phrases for meetings
+How to say "I'm not sure" politely
+3 ways to wish someone luck
+English phrases for the supermarket
+How to politely change the subject

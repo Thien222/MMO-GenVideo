@@ -1,0 +1,19 @@
+# Chu de cho video whiteboard ke chuyen. Dong bat dau bang # se bi bo qua.
+# Voi mode "life_lesson" (mac dinh), moi dong la mot CHU DE/GIA TRI -> Groq se dung thanh 1 cau chuyen co bai hoc.
+# Chay: python -m src.pipeline_whiteboard --batch topics_story.txt
+
+a lesson about patience
+why kindness always comes back to you
+the value of failure
+never judge someone by their appearance
+the power of small daily habits
+why letting go can set you free
+the boy who learned the meaning of hard work
+an old man teaches a lesson about gratitude
+why helping others helps yourself
+the farmer who learned not to give up
+a story about honesty being rewarded
+the true cost of chasing money over happiness
+why listening matters more than talking
+a small act of courage that changed everything
+the lesson hidden in a broken cup

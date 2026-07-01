@@ -1,0 +1,14 @@
+# Chu de cho video whiteboard ke chuyen: Messi va su kien tri
+# Chay: python -m src.pipeline_whiteboard --batch football_story_01.txt
+
+A small boy diagnosed with a growth hormone deficiency spent his childhood watching bigger kids play, facing doubts from everyone who said he was too fragile to ever survive on a professional football pitch.
+Instead of crying over his limitations, he spent thousands of lonely hours on the dusty fields of Rosario, training his left foot to move faster than the eye could see and turning his low center of gravity into an unstoppable weapon.
+The lesson of patience teaches us that greatness is never born overnight, and your smallest physical weakness today can become your ultimate, historic strength tomorrow if you refuse to stop walking.
+
+A legendary player spent over a decade carrying the heavy weight of an entire nation on his shoulders, losing final after final, crying in the dark, and even announcing his retirement because the pain of failure was too sharp to bear.
+But he found the courage to put on the jersey one last time, changing his playing style to lift his younger teammates up, and silently waiting for his moment until the ultimate golden trophy finally kissed his hands in Qatar.
+True resilience means understanding that a broken dream is not the end of the road, but a necessary chapter that tests your faith right before the universe allows you to touch your destiny.
+
+A young academy player sat on the bench for months watching his friends shine, feeling invisible and wondering if all his sacrifices, late-night runs, and lonely drills in the rain were completely in vain.
+He chose to control the only thing he could, which was his own effort, cleaning his boots with pride, supporting his rivals from the sideline, and training with the exact same intensity as if he were the captain.
+Success does not look at how long you have been forced to wait, but it looks at the attitude and the silent preparation you put in while waiting in the dark shadow of others.
