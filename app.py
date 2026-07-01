@@ -165,7 +165,13 @@ with st.sidebar:
     st.caption("Các giá trị này áp dụng cho lần tạo tiếp theo.")
 
     if st.button("📂 Mở thư mục output", use_container_width=True):
-        os.startfile(str(ROOT / "output")) if os.name == "nt" else st.info(str(ROOT / "output"))
+        try:
+            if os.name == "nt":
+                os.startfile(str(ROOT / "output"))
+            else:
+                st.info(f"Output folder: {ROOT / 'output'}")
+        except Exception:
+            st.info(f"Output folder: {ROOT / 'output'}")
 
     st.divider()
     st.markdown("**Gợi ý chủ đề hot**")
@@ -236,16 +242,8 @@ try:
 except Exception:
     st.warning("⚠️ Không tìm thấy ffmpeg. Trên deploy: đảm bảo packages.txt hoặc Dockerfile cài ffmpeg.")
 
-# --------------------------- MAIN TABS ---------------------------
-tab_create, tab_batch, tab_gallery, tab_deploy = st.tabs([
-    "🎥 Tạo Video Đơn", 
-    "📦 Batch Nhiều Video", 
-    "🖼️ Thư viện & Lịch sử", 
-    "🚀 Hướng dẫn Deploy"
-])
-
-with tab_create:
-    st.markdown("## 1. Thiết lập yêu cầu")
+# --------------------------- MAIN UI - TẠO VIDEO (always visible) ---------------------------
+st.markdown("## 🎥 Tạo Video Đơn (chọn Người que nhanh + tick các chế độ nhanh bên dưới để tạo siêu nhanh)")
 
 # Defaults (All features optimized for speed)
 _fast_default = True
@@ -257,12 +255,6 @@ col1, col2 = st.columns([3, 2])
 
 with col1:
     default_topic = st.session_state.get("topic_prefill", "")
-    if st.session_state.get("preset_ultra"):
-        st.session_state["preset_ultra"] = False
-        _visual_default = "procedural_stick"
-        _fast_default = True
-        _skip_default = True
-        _duration_default = 55
 
     topic = st.text_area(
         "Nhập yêu cầu / chủ đề / cốt truyện",
@@ -444,12 +436,6 @@ with tcol2:
 # Action buttons + Presets
 st.divider()
 
-# Ultra Fast Preset button (All features)
-if st.button("⚡⚡ SET ULTRA FAST PRESET (Người que + Nhanh nhất + Bỏ phụ đề)", use_container_width=True):
-    st.session_state["topic_prefill"] = topic or "Bài học cuộc sống từ người bình thường"
-    # Will be handled in next rerun via defaults
-    st.rerun()
-
 btn_col1, btn_col2, btn_col3 = st.columns([1.6, 1.6, 1])
 
 with btn_col1:
@@ -478,9 +464,10 @@ with btn_col3:
                 del st.session_state[k]
         st.rerun()
 
-# Quick preset
-if st.button("⚡ Chọn ngay: ULTRA FAST (60s, Người que nhanh, bỏ phụ đề)", use_container_width=False):
-    st.session_state["preset_ultra"] = True
+# Quick preset button - sets topic prefill and suggests fast options (user can adjust)
+if st.button("⚡ Set Ultra Fast (Người que nhanh + Bỏ phụ đề)", use_container_width=False):
+    st.session_state["topic_prefill"] = "Bài học cuộc sống từ người bình thường"
+    st.success("Đã set gợi ý Ultra Fast! Chọn '🚀 NGƯỜI QUE NHANH' và tick các chế độ nhanh bên dưới, rồi bấm Tạo kịch bản.")
     st.rerun()
 
 # --------------------------- STATE INIT ---------------------------
@@ -707,7 +694,13 @@ if video_path and Path(video_path).exists():
         st.download_button("⬇️ Tải video MP4", data=video_bytes, file_name=vp.name, mime="video/mp4", use_container_width=True)
     with dcol_extra2:
         if st.button("📂 Mở thư mục output", use_container_width=True):
-            os.startfile(str(workdir)) if os.name == "nt" else st.info(str(workdir))
+            try:
+                if os.name == "nt":
+                    os.startfile(str(workdir))
+                else:
+                    st.info(f"Folder: {workdir}")
+            except Exception:
+                st.info(f"Folder: {workdir}")
 
     st.caption(f"📁 Thư mục: {vp.parent}")
 
